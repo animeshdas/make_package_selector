@@ -18,8 +18,8 @@ from simple_term_menu import TerminalMenu
 
 
 def get_directories(start_dir, source):
-    # Get all visible directories in the specified path that contain a
-    # Makefile under the specified source directory or the default "src" directory
+    # Get all visible directories in the specified path that contain a Makefile 
+    # under the specified source directory or the default "src" directory.
     directories = []
     for d in os.listdir(start_dir):
         if os.path.isdir(os.path.join(start_dir, d)) and not d.startswith('.'):
@@ -49,7 +49,7 @@ def execute_commands(selected_dirs, start_dir, source, suppress_confirmation, sl
             print("Aborting operation. Thanks!")
             exit(0)
 
-    # Display message with command to execute
+    # Display message with command to execute.
     print("Executing command in {} seconds:".format(sleep_time))
     for dir_name in selected_dirs:
         src_path = os.path.join(start_dir, dir_name, source)
@@ -69,11 +69,11 @@ def main():
 
     args = parser.parse_args()
 
-    # Get the directories
+    # Get the directories.
     start_dir = os.path.abspath(args.dir)
     directories = get_directories(start_dir, args.source)
 
-    # Check if there are visible directories
+    # Check if there are visible directories, if not then show error and abort.
     if not directories:
         print(f"No sub-directory found with source directory '{args.source}' containing a Makefile under '{start_dir}'. Aborting!!!")
         exit(1)

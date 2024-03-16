@@ -1,6 +1,3 @@
-# Build using command
-# python -m build
-
 from setuptools import setup, find_packages
 from setuptools.command.install import install as _install
 import subprocess
