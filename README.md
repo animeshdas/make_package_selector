@@ -11,12 +11,10 @@ make_package_selector is a utility written in Python to clean and build selected
 #### Github : https://github.com/animeshdas/make_package_selector
 
 
-## Installation
+## Pre-requisite
+Python >= 3.6
 
-### Using PIP
-```
-pip install make_package_selector
-```
+## Installation
 
 ### Using Git
 #### Clone the repo
@@ -32,11 +30,6 @@ OR
 ```
 cd make_package_selector/dist
 python -m pip install make_package_selector-<version>.tar.gz
-```
-
-### Using self-contained executable
-```
-git install make_package_selector
 ```
 
 ### Usage

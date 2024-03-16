@@ -1,3 +1,6 @@
+# Build using command
+# python -m build
+
 from setuptools import setup, find_packages
 from setuptools.command.install import install as _install
 import subprocess
@@ -9,14 +12,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
 class BuildExeCommand(_install):
     def run(self):
 
-        # Run PyInstaller to create the self-contained executable
-        pyinstaller_command = [
-            "pyinstaller",
-            "--onefile",
-            "--distpath", "dist",
-            "make_package_selector/make_package_selector.py"
-        ]
-        subprocess.run(pyinstaller_command, check=True)
+        # # Run PyInstaller to create the self-contained executable
+        # pyinstaller_command = [
+        #     "pyinstaller",
+        #     "--onefile",
+        #     "--distpath", "dist",
+        #     "make_package_selector/make_package_selector.py"
+        # ]
+        # subprocess.run(pyinstaller_command, check=True)
 
         # # Build the .egg package
         # egg_command = [
@@ -40,7 +43,9 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/animeshdas/make-package-selector",
     packages=find_packages(),
-    setup_requires=[],
+    setup_requires=[
+        'simple-term-menu',
+    ],
     install_requires=[
         'simple-term-menu',
     ],
