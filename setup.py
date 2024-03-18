@@ -32,13 +32,13 @@ class BuildExeCommand(_install):
 
 setup(
     name='make-package-selector',
-    version='1.0',
+    version='1.1.post2',
     author="Animesh Das",
     author_email="jobs4ani@gmail.com",
     description="A tool to select directories and run make clean all command on those selected directory/src",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/animeshdas/make-package-selector",
+    url="https://github.com/animeshdas/make_package_selector",
     packages=find_packages(),
     setup_requires=[
         'simple-term-menu',

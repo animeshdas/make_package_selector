@@ -1,6 +1,6 @@
 # Make Package Selector
 
-make_package_selector is a utility written in Python to clean and build multiple directories. It does it by allowing you to select one or multiple directory in a visual table through CLI. 
+make_package_selector is a utility written in Python to `make` clean and build multiple directories. It does it by allowing you to select one or multiple directory in a visual table through CLI. 
 
 You can also customize the start path (default is current directory) and source path (default is src) and other parameter. 
 
@@ -30,7 +30,7 @@ options:
 
 ### Using Pip
 ```
-pip install make-package-selector
+pip install --upgrade make-package-selector
 ``` 
 
 ### Using Git

@@ -44,8 +44,8 @@ def execute_commands(selected_dirs, start_dir, source, suppress_confirmation, sl
             print(f"[*] {src_path}")
         print("")
 
-        confirmation = input("Are you sure you want to clean and build the selected directories? (yes/no): ").lower()
-        if confirmation != 'yes':
+        confirmation = input("Are you sure you want to clean and build the selected directories? (yes[y]/no[n]): ").lower()
+        if confirmation not in ['yes', 'y']:
             print("Aborting operation. Thanks!")
             exit(0)
 
